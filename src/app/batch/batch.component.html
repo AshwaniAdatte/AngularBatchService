@@ -1,0 +1,51 @@
+<p>
+  batch works!
+</p>
+
+<!--<div>
+    <label >Batch Id</label>
+    <input [(ngModel)]="batch.BatchId" type="text" id="BatchId" >
+  </div>-->
+<div>
+  <label >Batch Name</label>
+  <input [(ngModel)]="batch.BatchName" type="text" id="BatchName" >
+</div>
+<div>
+    <label >Hours Taken</label>
+    <input [(ngModel)]="batch.HoursTaken" type="text"  id="HoursTaken">
+  </div>
+  <div>
+      <label >No of Hours</label>
+      <input [(ngModel)]="batch.NoOfHours" type="text" id="NoOfHours"  >
+    </div>
+    <div>
+        <label >Remarks</label>
+        <input [(ngModel)]="batch.Remarks" type="text"  id="Remarks">
+      </div>
+
+<div>
+    <label >Start Date</label>
+  <input [(ngModel)]="batch.StartDate" type="date" id="StartDate">
+</div>
+<div>
+    <label >Tentative End Date</label>
+    <input [(ngModel)]="batch.TentativeEndDate" type="date" id="EndDate" >
+  </div>
+<input type="button" (click)="saveBatchData()" value="Save" >
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Batch Name</th>
+      <th>Hours</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let item of batches">
+    <td>{{item.BatchId}}</td>
+    <td>{{item.BatchName}}</td>
+    <td>{{item.NoOfHours}}</td>
+  </tr>
+</tbody>
+</table>
